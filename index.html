@@ -8,6 +8,8 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- Google Fonts -->
@@ -127,7 +129,6 @@
                         <button class="btn btn-outline-warning filter-btn active" data-category="all">Todas</button>
                         <button class="btn btn-outline-warning filter-btn"
                             data-category="Ingeniería">Ingeniería</button>
-                        <button class="btn btn-outline-warning filter-btn" data-category="Ciencias">Ciencias</button>
                         <button class="btn btn-outline-warning filter-btn"
                             data-category="Licenciatura">Licenciatura</button>
                     </div>
@@ -159,18 +160,18 @@
                 </div>
 
                 <!-- Física -->
-                <div class="col-lg-6 col-xl-4 career-card-container" data-nombre="Física" data-category="Ciencias">
+                <div class="col-lg-6 col-xl-4 career-card-container" data-nombre="Física" data-category="Licenciatura">
                     <div class="card career-card h-100" onclick="location.href='carreras/fisica.html'">
                         <div class="card-header p-0 border-0 bg-transparent">
                             <div class="career-card-banner"
                                 style="height: 120px; background: linear-gradient(135deg, #FFD700 0%, #FFC107 100%); display: flex; align-items: center; justify-content: center;">
-                                <i class="bi bi-atom text-white" style="font-size: 3.5rem; opacity: 0.8;"></i>
+                                <i class="bi bi-radioactive text-white" style="font-size: 3.5rem; opacity: 0.8;"></i>
                             </div>
                         </div>
                         <div class="card-body d-flex flex-column p-4">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <h5 class="card-title mb-0">Física</h5>
-                                <span class="badge bg-warning text-dark ms-2 flex-shrink-0">Ciencias</span>
+                                <span class="badge bg-warning text-dark ms-2 flex-shrink-0">Licenciatura</span>
                             </div>
                             <p class="card-text flex-grow-1 mb-4">El físico es el profesionista que explora e identifica
                                 los principios básicos que gobiernan la estructura y el comportamiento de la materia...
@@ -178,7 +179,7 @@
                             <div class="coordinator-section-card mt-auto">
                                 <div class="d-flex align-items-center gap-3">
                                     <img src="images/jorge-manuel-montes-arechiga.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
+                                        onerror="this.src='images/placeholder-profesor.png'">
                                     <div class="flex-grow-1">
                                         <div class="coordinator-name">Dr. Jorge Manuel Montes Aréchiga</div>
                                         <div class="coordinator-title">Coordinador</div>
@@ -191,7 +192,8 @@
                 </div>
 
                 <!-- Matemáticas -->
-                <div class="col-lg-6 col-xl-4 career-card-container" data-nombre="Matemáticas" data-category="Ciencias">
+                <div class="col-lg-6 col-xl-4 career-card-container" data-nombre="Matemáticas"
+                    data-category="Licenciatura">
                     <div class="card career-card h-100" onclick="location.href='carreras/matematicas.html'">
                         <div class="card-header p-0 border-0 bg-transparent">
                             <div class="career-card-banner"
@@ -202,7 +204,7 @@
                         <div class="card-body d-flex flex-column p-4">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <h5 class="card-title mb-0">Matemáticas</h5>
-                                <span class="badge bg-warning text-dark ms-2 flex-shrink-0">Ciencias</span>
+                                <span class="badge bg-warning text-dark ms-2 flex-shrink-0">Licenciatura</span>
                             </div>
                             <p class="card-text flex-grow-1 mb-4">Preparar profesionistas con una formación matemática
                                 armónica y equilibrada que desarrolle la capacidad de ver cuales son los aspectos más
@@ -210,7 +212,7 @@
                             <div class="coordinator-section-card mt-auto">
                                 <div class="d-flex align-items-center gap-3">
                                     <img src="images/maria-elena-olivares-perez.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
+                                        onerror="this.src='images/placeholder-profesor.png'">
                                     <div class="flex-grow-1">
                                         <div class="coordinator-name">Mtra. María Elena Olivares Pérez</div>
                                         <div class="coordinator-title">Coordinador</div>
@@ -223,18 +225,18 @@
                 </div>
 
                 <!-- Química -->
-                <div class="col-lg-6 col-xl-4 career-card-container" data-nombre="Química" data-category="Ciencias">
+                <div class="col-lg-6 col-xl-4 career-card-container" data-nombre="Química" data-category="Licenciatura">
                     <div class="card career-card h-100" onclick="location.href='carreras/quimica.html'">
                         <div class="card-header p-0 border-0 bg-transparent">
                             <div class="career-card-banner"
                                 style="height: 120px; background: linear-gradient(135deg, #F9A825 0%, #FF8F00 100%); display: flex; align-items: center; justify-content: center;">
-                                <i class="bi bi-flask text-white" style="font-size: 3.5rem; opacity: 0.8;"></i>
+                                <i class="bi bi-droplet-half text-white" style="font-size: 3.5rem; opacity: 0.8;"></i>
                             </div>
                         </div>
                         <div class="card-body d-flex flex-column p-4">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <h5 class="card-title mb-0">Química</h5>
-                                <span class="badge bg-warning text-dark ms-2 flex-shrink-0">Ciencias</span>
+                                <span class="badge bg-warning text-dark ms-2 flex-shrink-0">Licenciatura</span>
                             </div>
                             <p class="card-text flex-grow-1 mb-4">Obtener un conocimiento fundamental de la materia
                                 (naturaleza, estados, estructura, forma de combinarse e interrelaciones energéticas),
@@ -242,7 +244,7 @@
                             <div class="coordinator-section-card mt-auto">
                                 <div class="d-flex align-items-center gap-3">
                                     <img src="images/carolina-elizabeth-gomez-marquez.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
+                                        onerror="this.src='images/placeholder-profesor.png'">
                                     <div class="flex-grow-1">
                                         <div class="coordinator-name">Dra. Carolina Elizabeth Gómez Márquez</div>
                                         <div class="coordinator-title">Coordinador</div>
@@ -262,7 +264,7 @@
                         <div class="card-header p-0 border-0 bg-transparent">
                             <div class="career-card-banner"
                                 style="height: 120px; background: linear-gradient(135deg, #FF8F00 0%, #E65100 100%); display: flex; align-items: center; justify-content: center;">
-                                <i class="bi bi-droplet-half text-white" style="font-size: 3.5rem; opacity: 0.8;"></i>
+                                <i class="bi bi-capsule text-white" style="font-size: 3.5rem; opacity: 0.8;"></i>
                             </div>
                         </div>
                         <div class="card-body d-flex flex-column p-4">
@@ -276,9 +278,42 @@
                             <div class="coordinator-section-card mt-auto">
                                 <div class="d-flex align-items-center gap-3">
                                     <img src="images/maria-luisa-munoz-almaguer.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
+                                        onerror="this.src='images/placeholder-profesor.png'">
                                     <div class="flex-grow-1">
                                         <div class="coordinator-name">Dra. María Luisa Muñoz Almaguer</div>
+                                        <div class="coordinator-title">Coordinador</div>
+                                    </div>
+                                    <i class="bi bi-arrow-right-circle-fill text-warning fs-3"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ing. en Ciencia de Materiales -->
+                <div class="col-lg-6 col-xl-4 career-card-container" data-nombre="Ingeniería en Ciencia de Materiales"
+                    data-category="Ingeniería">
+                    <div class="card career-card h-100"
+                        onclick="location.href='carreras/ingenieria_en_ciencia_de_materiales.html'">
+                        <div class="card-header p-0 border-0 bg-transparent">
+                            <div class="career-card-banner"
+                                style="height: 120px; background: linear-gradient(135deg, #795548 0%, #A1887F 100%); display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-layers text-white" style="font-size: 3.5rem; opacity: 0.8;"></i>
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h5 class="card-title mb-0">I. Ciencia de Materiales</h5>
+                                <span class="badge bg-warning text-dark ms-2 flex-shrink-0">Ingeniería</span>
+                            </div>
+                            <p class="card-text flex-grow-1 mb-4">Formar profesionistas con una sólida comprensión de
+                                los principios científicos relacionados con el desarrollo y diseño de materiales...</p>
+                            <div class="coordinator-section-card mt-auto">
+                                <div class="d-flex align-items-center gap-3">
+                                    <img src="images/javier-rosales-martinez.jpg" class="coordinator-img"
+                                        onerror="this.src='images/placeholder-profesor.png'">
+                                    <div class="flex-grow-1">
+                                        <div class="coordinator-name">Mtro. Javier Rosales Martínez</div>
                                         <div class="coordinator-title">Coordinador</div>
                                     </div>
                                     <i class="bi bi-arrow-right-circle-fill text-warning fs-3"></i>
@@ -317,7 +352,7 @@
                             <div class="coordinator-section-card mt-auto">
                                 <div class="d-flex align-items-center gap-3">
                                     <img src="images/manuel-alberto-gallardo-sanchez.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
+                                        onerror="this.src='images/placeholder-profesor.png'">
                                     <div class="flex-grow-1">
                                         <div class="coordinator-name">Dr. Manuel Alberto Gallardo Sanchez</div>
                                         <div class="coordinator-title">Coordinador</div>
@@ -350,7 +385,7 @@
                             <div class="coordinator-section-card mt-auto">
                                 <div class="d-flex align-items-center gap-3">
                                     <img src="images/omar-hunab-ku-candelas-hernandez.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
+                                        onerror="this.src='images/placeholder-profesor.png'">
                                     <div class="flex-grow-1">
                                         <div class="coordinator-name">Ing. Omar Hunab-Ku Candelas Hernández</div>
                                         <div class="coordinator-title">Coordinador</div>
@@ -385,7 +420,7 @@
                             <div class="coordinator-section-card mt-auto">
                                 <div class="d-flex align-items-center gap-3">
                                     <img src="images/laura-angelica-zamora-quintana.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
+                                        onerror="this.src='images/placeholder-profesor.png'">
                                     <div class="flex-grow-1">
                                         <div class="coordinator-name">Dra. Laura Angélica Zamora Quintana</div>
                                         <div class="coordinator-title">Coordinador</div>
@@ -418,7 +453,7 @@
                             <div class="coordinator-section-card mt-auto">
                                 <div class="d-flex align-items-center gap-3">
                                     <img src="images/enrique-michel-valdivia.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
+                                        onerror="this.src='images/placeholder-profesor.png'">
                                     <div class="flex-grow-1">
                                         <div class="coordinator-name">Dr. Enrique Michel Valdivia</div>
                                         <div class="coordinator-title">Coordinador</div>
@@ -452,7 +487,7 @@
                             <div class="coordinator-section-card mt-auto">
                                 <div class="d-flex align-items-center gap-3">
                                     <img src="images/_mg_2283.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
+                                        onerror="this.src='images/placeholder-profesor.png'">
                                     <div class="flex-grow-1">
                                         <div class="coordinator-name">Ing. Eduardo Corona López</div>
                                         <div class="coordinator-title">Coordinador</div>
@@ -485,7 +520,7 @@
                             <div class="coordinator-section-card mt-auto">
                                 <div class="d-flex align-items-center gap-3">
                                     <img src="images/rafael-gonzalez-bravo.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
+                                        onerror="this.src='images/placeholder-profesor.png'">
                                     <div class="flex-grow-1">
                                         <div class="coordinator-name">Dr. Rafael Gonzalez Bravo</div>
                                         <div class="coordinator-title">Coordinador</div>
@@ -505,7 +540,7 @@
                         <div class="card-header p-0 border-0 bg-transparent">
                             <div class="career-card-banner"
                                 style="height: 120px; background: linear-gradient(135deg, #8BC34A 0%, #CDDC39 100%); display: flex; align-items: center; justify-content: center;">
-                                <i class="bi bi-droplet text-white" style="font-size: 3.5rem; opacity: 0.8;"></i>
+                                <i class="fa-solid fa-apple-whole text-white" style="font-size: 3.5rem; opacity: 0.8;"></i>
                             </div>
                         </div>
                         <div class="card-body d-flex flex-column p-4">
@@ -518,7 +553,7 @@
                             <div class="coordinator-section-card mt-auto">
                                 <div class="d-flex align-items-center gap-3">
                                     <img src="images/ericka-fabiola-lopez-villalobos.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
+                                        onerror="this.src='images/placeholder-profesor.png'">
                                     <div class="flex-grow-1">
                                         <div class="coordinator-name">Dra. Erika Fabiola López Villalobos</div>
                                         <div class="coordinator-title">Coordinador</div>
@@ -529,40 +564,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Ing. en Ciencia de Materiales -->
-                <div class="col-lg-6 col-xl-4 career-card-container" data-nombre="Ingeniería en Ciencia de Materiales"
-                    data-category="Ingeniería">
-                    <div class="card career-card h-100"
-                        onclick="location.href='carreras/ingenieria_en_ciencia_de_materiales.html'">
-                        <div class="card-header p-0 border-0 bg-transparent">
-                            <div class="career-card-banner"
-                                style="height: 120px; background: linear-gradient(135deg, #795548 0%, #A1887F 100%); display: flex; align-items: center; justify-content: center;">
-                                <i class="bi bi-layers text-white" style="font-size: 3.5rem; opacity: 0.8;"></i>
-                            </div>
-                        </div>
-                        <div class="card-body d-flex flex-column p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <h5 class="card-title mb-0">I. Ciencia de Materiales</h5>
-                                <span class="badge bg-warning text-dark ms-2 flex-shrink-0">Ingeniería</span>
-                            </div>
-                            <p class="card-text flex-grow-1 mb-4">Formar profesionistas con una sólida comprensión de
-                                los principios científicos relacionados con el desarrollo y diseño de materiales...</p>
-                            <div class="coordinator-section-card mt-auto">
-                                <div class="d-flex align-items-center gap-3">
-                                    <img src="images/javier-rosales-martinez.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
-                                    <div class="flex-grow-1">
-                                        <div class="coordinator-name">Mtro. Javier Rosales Martínez</div>
-                                        <div class="coordinator-title">Coordinador</div>
-                                    </div>
-                                    <i class="bi bi-arrow-right-circle-fill text-warning fs-3"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
 
                 <!-- División de Tecnologías -->
                 <div class="col-12 mt-5 mb-4 division-section" data-category="Tecnologías">
@@ -581,7 +582,7 @@
                         <div class="card-header p-0 border-0 bg-transparent">
                             <div class="career-card-banner"
                                 style="height: 120px; background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%); display: flex; align-items: center; justify-content: center;">
-                                <i class="bi bi-cpu text-white" style="font-size: 3.5rem; opacity: 0.8;"></i>
+                                <i class="bi bi-code-slash text-white" style="font-size: 3.5rem; opacity: 0.8;"></i>
                             </div>
                         </div>
                         <div class="card-body d-flex flex-column p-4">
@@ -595,7 +596,7 @@
                             <div class="coordinator-section-card mt-auto">
                                 <div class="d-flex align-items-center gap-3">
                                     <img src="images/pedro-misraim-gomez-rodriguez_0.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
+                                        onerror="this.src='images/placeholder-profesor.png'">
                                     <div class="flex-grow-1">
                                         <div class="coordinator-name">Mtro. Pedro Misraim Gómez Rodríguez</div>
                                         <div class="coordinator-title">Coordinador</div>
@@ -628,7 +629,7 @@
                             <div class="coordinator-section-card mt-auto">
                                 <div class="d-flex align-items-center gap-3">
                                     <img src="images/mtra_sara_esquivel_small.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
+                                        onerror="this.src='images/placeholder-profesor.png'">
                                     <div class="flex-grow-1">
                                         <div class="coordinator-name">Mtra. Sara Esquivel Torres</div>
                                         <div class="coordinator-title">Coordinadora</div>
@@ -648,7 +649,7 @@
                         <div class="card-header p-0 border-0 bg-transparent">
                             <div class="career-card-banner"
                                 style="height: 120px; background: linear-gradient(135deg, #3F51B5 0%, #303F9F 100%); display: flex; align-items: center; justify-content: center;">
-                                <i class="bi bi-circuit-board text-white" style="font-size: 3.5rem; opacity: 0.8;"></i>
+                                <i class="bi bi-cpu text-white" style="font-size: 3.5rem; opacity: 0.8;"></i>
                             </div>
                         </div>
                         <div class="card-body d-flex flex-column p-4">
@@ -661,7 +662,7 @@
                             <div class="coordinator-section-card mt-auto">
                                 <div class="d-flex align-items-center gap-3">
                                     <img src="images/flor-anel-galaviz-lugo.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
+                                        onerror="this.src='images/placeholder-profesor.png'">
                                     <div class="flex-grow-1">
                                         <div class="coordinator-name">Mtra. Flor Anel Galaviz Lugo</div>
                                         <div class="coordinator-title">Coordinadora</div>
@@ -693,7 +694,7 @@
                             <div class="coordinator-section-card mt-auto">
                                 <div class="d-flex align-items-center gap-3">
                                     <img src="images/anuar-benjamin-beltran-gonzalez.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
+                                        onerror="this.src='images/placeholder-profesor.png'">
                                     <div class="flex-grow-1">
                                         <div class="coordinator-name">Dr. Anuar Benjamín Beltrán González</div>
                                         <div class="coordinator-title">Coordinador</div>
@@ -726,7 +727,7 @@
                             <div class="coordinator-section-card mt-auto">
                                 <div class="d-flex align-items-center gap-3">
                                     <img src="images/blanca-lorena-reynoso-gomez.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
+                                        onerror="this.src='images/placeholder-profesor.png'">
                                     <div class="flex-grow-1">
                                         <div class="coordinator-name">Dra. Blanca Lorena Reynoso Gómez</div>
                                         <div class="coordinator-title">Coordinadora</div>
@@ -758,7 +759,7 @@
                             <div class="coordinator-section-card mt-auto">
                                 <div class="d-flex align-items-center gap-3">
                                     <img src="images/erasmo.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
+                                        onerror="this.src='images/placeholder-profesor.png'">
                                     <div class="flex-grow-1">
                                         <div class="coordinator-name">Dr. Erasmo Gabriel Martínez Soltero</div>
                                         <div class="coordinator-title">Coordinador</div>
@@ -790,7 +791,7 @@
                             <div class="coordinator-section-card mt-auto">
                                 <div class="d-flex align-items-center gap-3">
                                     <img src="images/mtro_victormoreno.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
+                                        onerror="this.src='images/placeholder-profesor.png'">
                                     <div class="flex-grow-1">
                                         <div class="coordinator-name">Mtro. Victor Ernesto Moreno González</div>
                                         <div class="coordinator-title">Coordinador</div>
@@ -823,7 +824,7 @@
                             <div class="coordinator-section-card mt-auto">
                                 <div class="d-flex align-items-center gap-3">
                                     <img src="images/ehecatl-joel-chavez-martinez.jpg" class="coordinator-img"
-                                        onerror="this.src='images/logos/ICON.png'">
+                                        onerror="this.src='images/placeholder-profesor.png'">
                                     <div class="flex-grow-1">
                                         <div class="coordinator-name">Mtro. Ehecatl Joel Chávez Martínez</div>
                                         <div class="coordinator-title">Coordinador</div>
