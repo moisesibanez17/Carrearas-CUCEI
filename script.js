@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // We only need specific setup for the index page since career pages are static
     if (!currentPage.includes('carreras/')) {
         setupSearch();
+        setupFilters();
         setupClearButton();
+        applyFiltersAndSearch(); // Initial count
         hideLoading(); // Ensure loading is hidden on static load
     }
 });
@@ -13,51 +15,72 @@ document.addEventListener('DOMContentLoaded', function () {
 // Setup search functionality for static HTML cards
 function setupSearch() {
     const searchInput = document.getElementById('searchInput');
-    const cards = document.querySelectorAll('.career-card-container');
-    const noResults = document.getElementById('noResults');
-    const resultCount = document.getElementById('resultCount');
-    const divisionHeaders = document.querySelectorAll('.division-header');
-
     if (!searchInput) return;
 
-    searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase().trim();
-        let visibleCount = 0;
+    searchInput.addEventListener('input', () => {
+        applyFiltersAndSearch();
+    });
+}
 
-        // Reset visibility for headers first
-        const headerCounts = new Map();
-        divisionHeaders.forEach(header => {
-            const divisionContainer = header.closest('.col-12');
-            divisionContainer.style.display = searchTerm === '' ? 'block' : 'none';
-        });
+// New function to handle both filters and search
+function applyFiltersAndSearch() {
+    const searchInput = document.getElementById('searchInput');
+    const activeFilter = document.querySelector('.filter-btn.active');
+    const selectedCategory = activeFilter ? activeFilter.getAttribute('data-category') : 'all';
+    const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
 
-        cards.forEach(card => {
-            const nombre = card.getAttribute('data-nombre').toLowerCase();
-            const category = card.getAttribute('data-category').toLowerCase();
-            const content = card.textContent.toLowerCase();
+    const cards = document.querySelectorAll('.career-card-container');
+    const divisionHeaders = document.querySelectorAll('.col-12.division-section');
+    const noResults = document.getElementById('noResults');
+    const resultCount = document.getElementById('resultCount');
 
-            if (nombre.includes(searchTerm) || category.includes(searchTerm) || content.includes(searchTerm)) {
-                card.style.display = 'block';
-                visibleCount++;
+    let visibleCount = 0;
 
-                // Show the corresponding division header if searching
-                const prevDivisionHeader = findPreviousDivisionHeader(card);
-                if (prevDivisionHeader) {
-                    prevDivisionHeader.style.display = 'block';
-                }
-            } else {
-                card.style.display = 'none';
-            }
-        });
+    // First hide headers
+    divisionHeaders.forEach(header => {
+        header.style.display = 'none';
+    });
 
-        // Update counts and no results message
-        if (resultCount) resultCount.textContent = visibleCount;
+    cards.forEach(card => {
+        const nombre = card.getAttribute('data-nombre').toLowerCase();
+        const category = card.getAttribute('data-category') || '';
+        const cardContent = card.textContent.toLowerCase();
 
-        if (visibleCount === 0) {
-            noResults.classList.remove('d-none');
+        const matchesSearch = searchTerm === '' ||
+            nombre.includes(searchTerm) ||
+            category.toLowerCase().includes(searchTerm) ||
+            cardContent.includes(searchTerm);
+
+        const matchesCategory = selectedCategory === 'all' || category === selectedCategory;
+
+        if (matchesSearch && matchesCategory) {
+            card.style.display = 'block';
+            visibleCount++;
+
+            // Show corresponding division header
+            const prevHeader = findPreviousDivisionHeader(card);
+            if (prevHeader) prevHeader.style.display = 'block';
         } else {
-            noResults.classList.add('d-none');
+            card.style.display = 'none';
         }
+    });
+
+    if (resultCount) resultCount.textContent = visibleCount;
+    if (noResults) {
+        if (visibleCount === 0) noResults.classList.remove('d-none');
+        else noResults.classList.add('d-none');
+    }
+}
+
+// Setup category filters
+function setupFilters() {
+    const filters = document.querySelectorAll('.filter-btn');
+    filters.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filters.forEach(f => f.classList.remove('active'));
+            btn.classList.add('active');
+            applyFiltersAndSearch();
+        });
     });
 }
 
